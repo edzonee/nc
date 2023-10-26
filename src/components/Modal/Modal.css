@@ -1,0 +1,30 @@
+.modal {
+    display: block;
+    background-color: #ffffff;
+    z-index: 200;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-btn {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 810px) {
+    .modal {
+      width: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .modal {
+      width: 300px;
+      font-size: 10px;
+    }
+  }
