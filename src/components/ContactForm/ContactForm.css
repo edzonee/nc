@@ -29,7 +29,7 @@ textarea {
         justify-content: center;
         align-items: center;
         height: 300px;
-        flex-direction: column; /* Stack the inputs vertically */
+        flex-direction: column; 
         gap: 10px;
     }
     .contact-title {
