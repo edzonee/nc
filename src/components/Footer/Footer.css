@@ -1,7 +1,6 @@
-/* Footer.css */
 .footer {
-    background-color: #333; /* Background color of the footer */
-    color: white; /* Text color */
+    background-color: #333; 
+    color: white; 
     text-align: center;
     padding: 10px 0px;
     position: absolute;
@@ -10,12 +9,15 @@
   }
   
   .footer-link {
-    color: #ffffff; /* Default link color */
+    color: #ffffff; 
     text-decoration: none;
   }
+
+  .footer-link:hover {
+    color: #007bff;
+  }
   
-  /* Active link style */
   .footer-link.active {
-    color: #007bff; /* Color for active link */
-    font-weight: bold; /* Apply other styles as needed */
+    color: #007bff; 
+    font-weight: bold;
   }

@@ -66,13 +66,15 @@ li:hover {
   color: #70a0ff;
 }
 
+.nav-link:hover {
+  color: #70a0ff;
+}
 .nav-link {
-  color: #000; /* Default link color */
+  color: #000; 
   text-decoration: none;
 }
 
-/* Active link style */
 .nav-link.active {
-  color: #007bff; /* Color for active link */
-  font-weight: bold; /* Apply other styles as needed */
+  color: #007bff;
+  font-weight: bold;
 }
