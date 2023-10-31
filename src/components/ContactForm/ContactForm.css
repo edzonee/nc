@@ -1,12 +1,46 @@
+.contact-title {
+    color: #000;
+}
+
 input {
-    width: 250px;
-    padding: 5px;
-    margin: 5px;
+  width: 250px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
 }
 
 textarea {
-    width: 250px;
-    height: 150px;
-    padding: 5px;
-    margin: 5px;
+  width: 250px;
+  height: 150px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  resize: none; 
+  overflow: auto;
+  max-height: 200px;
+}
+
+@media only screen and (min-width: 501px) {
+    .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        flex-direction: column; /* Stack the inputs vertically */
+        gap: 10px;
+    }
+    .contact-title {
+       font-size: 19px;
+       padding-bottom: 10px;
+    }
+    input, textarea {
+        width: 350px;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+    }
 }

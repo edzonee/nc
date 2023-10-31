@@ -1,0 +1,10 @@
+.default-btn {
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.default-btn:hover {
+    background-color: lightblue;
+}

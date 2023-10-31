@@ -2,17 +2,12 @@ import { useState } from "react";
 import Modal from "../Modal/Modal";
 import Backdrop from "../Modal/Backdrop";
 import ContactForm from "../ContactForm/ContactForm";
-import { useLocation, Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Footer.css";
+import {useLocation, Link } from "react-router-dom";
 
-const Navbar = () => {
-  const location = useLocation();
+const Footer = () => {
+    const location = useLocation();
   const [showModal, setShowModal] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   const contactForm = () => {
     setShowModal(true);
@@ -22,15 +17,14 @@ const Navbar = () => {
     setShowModal(false);
   };
 
+
   return (
-    <nav className="navbar">
-      <div className="brand">Norra Cypern Lyxfastigheter</div>
-      <div className={`menu ${menuOpen ? "open" : ""}`}>
-        <ul>
+    <div className="footer">
+      <ul>
           <li>
             <Link
               to="/"
-              className={`nav-link ${
+              className={`footer-link ${
                 location.pathname === "/" ? "active" : ""
               }`}
             >
@@ -40,7 +34,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/about"
-              className={`nav-link ${
+              className={`footer-link ${
                 location.pathname === "/about" ? "active" : ""
               }`}
             >
@@ -50,7 +44,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/todo"
-              className={`nav-link ${
+              className={`footer-link ${
                 location.pathname === "/todo" ? "active" : ""
               }`}
             >
@@ -61,7 +55,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/faq"
-              className={`nav-link ${
+              className={`footer-link ${
                 location.pathname === "/faq" ? "active" : ""
               }`}
             >
@@ -71,7 +65,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/aboutus"
-              className={`nav-link ${
+              className={`footer-link ${
                 location.pathname === "/aboutus" ? "active" : ""
               }`}
             >
@@ -79,12 +73,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </div>
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
       {showModal && (
         <Modal command={hideModal}>
           {" "}
@@ -92,8 +80,8 @@ const Navbar = () => {
         </Modal>
       )}
       {showModal && <Backdrop show hideModal={hideModal} />}
-    </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default Footer;

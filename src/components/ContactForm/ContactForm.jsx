@@ -64,7 +64,7 @@ const ContactForm = () => {
     <div className="contact-container" ref={containerRef}>
       <div className="contact-box">
         <form ref={form} onSubmit={buttonStatus}>
-          <h2>Kontakta oss!</h2>
+          <h2 className="contact-title">Kontakta oss!</h2>
 
           <div className="input-container">
             <input

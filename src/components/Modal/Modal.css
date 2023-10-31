@@ -2,13 +2,14 @@
     display: block;
     background-color: #ffffff;
     z-index: 200;
-    width: 50%;
+    width: 500px;
     padding: 20px;
     text-align: center;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 8px;
   }
   
   .modal-btn {
