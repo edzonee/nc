@@ -6,7 +6,7 @@ import "./Footer.css";
 import {useLocation, Link } from "react-router-dom";
 
 const Footer = () => {
-    const location = useLocation();
+  const location = useLocation();
   const [showModal, setShowModal] = useState(false);
 
   const contactForm = () => {
@@ -17,65 +17,34 @@ const Footer = () => {
     setShowModal(false);
   };
 
+  const links = [
+    { to: "/", label: "Hem" },
+    { to: "/about", label: "Om Norra Cypern" },
+    { to: "/todo", label: "Att göra i Cypern" },
+    { to: "/aboutus", label: "Om oss" },
+    { to: "/faq", label: "FAQ" },
+  ];
 
   return (
     <div className="footer">
       <ul>
-          <li>
+        {links.map((link, index) => (
+          <li key={index}>
             <Link
-              to="/"
+              to={link.to}
               className={`footer-link ${
-                location.pathname === "/" ? "active" : ""
+                location.pathname === link.to ? "active" : ""
               }`}
             >
-              Hem
+              {link.label}
             </Link>
           </li>
-          <li>
-            <Link
-              to="/about"
-              className={`footer-link ${
-                location.pathname === "/about" ? "active" : ""
-              }`}
-            >
-              Om Norra Cypern
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/todo"
-              className={`footer-link ${
-                location.pathname === "/todo" ? "active" : ""
-              }`}
-            >
-              Att göra i Cypern
-            </Link>
-          </li>
-          <li onClick={contactForm}>Kontakta oss</li>
-          <li>
-            <Link
-              to="/faq"
-              className={`footer-link ${
-                location.pathname === "/faq" ? "active" : ""
-              }`}
-            >
-              FAQ
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/aboutus"
-              className={`footer-link ${
-                location.pathname === "/aboutus" ? "active" : ""
-              }`}
-            >
-              Om oss
-            </Link>
-          </li>
-        </ul>
+        ))}
+        <li onClick={contactForm}>Kontakta oss</li>
+      </ul>
+
       {showModal && (
         <Modal command={hideModal}>
-          {" "}
           <ContactForm />
         </Modal>
       )}

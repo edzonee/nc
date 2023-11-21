@@ -78,3 +78,13 @@ li:hover {
   color: #007bff;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 801px) {
+  .menu {
+    width: 20%;
+  }
+  
+  .menu.open {
+    width: 20%;
+  }
+}
